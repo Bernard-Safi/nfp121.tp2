@@ -6,6 +6,7 @@ package question1;
  * @author (votre nom)
  * @version (un numéro de version ou une date)
  */
+
 public class FahrenheitCelsius {
 
 	/**
@@ -17,10 +18,11 @@ public class FahrenheitCelsius {
 	 */
 	public static void main(String[] args) {
 		// pour tous les paramètres de la ligne de commande
-		int fahrenheit = 0;
-		float celsius = 0;
+		for(int i=0;i<args.length;i++){
+		int fahrenheit = Integer.parseInt(args[i]);
+		float celsius = fahrenheitEnCelsius(fahrenheit);
 		System.out.println(fahrenheit + "\u00B0F -> " + celsius + "\u00B0C"); // ligne,
-																				// format
+}																		// format
 																				// imposés
 																				
 	}
@@ -33,9 +35,9 @@ public class FahrenheitCelsius {
 	 * @return la conversion en degré Celsius
 	 */
 	public static float fahrenheitEnCelsius(int f) {
-
-		return 0.F; // à compléter en remplaçant ce return 0.F par la fonction
+                   
+		return (float)((int)((float)(f-32)*5/9*10)/10.0f); // à compléter en remplaçant ce return 0.F par la fonction
 					// de conversion
 	}
-
+	
 }
